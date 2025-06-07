@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Varela", sans-serif;
+  background-color: #0e417c;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+@font-face {
+  font-family: "Varela";
+  src: url("./assets/varela-round.ttf") format("truetype");
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.recorder-title {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+/* Record button styles */
+#record-btn {
+  position: relative;
+  background-color: #38a9fd;
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 50%;
+  border: none;
+  box-shadow: 0 0 10px rgba(62, 62, 62, 0.5);
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  margin-bottom: 1rem;
+}
+
+#record-btn:hover {
+  background-color: #3198e6;
+  transform: scale(1.05);
+}
+
+/* Styles for recording time */
+#record-btn.recording {
+  background-color: #f4493c;
+}
+
+#record-btn.recording::before,
+#record-btn.recording::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #f4493c;
+  border-radius: 50%;
+  z-index: -1;
+  transform: scale(1.1);
+  animation: grow-circle 1s infinite;
+}
+
+@keyframes grow-circle {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
