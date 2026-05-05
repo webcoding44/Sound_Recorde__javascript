@@ -6,7 +6,7 @@
 
 body {
   font-family: "Varela", sans-serif;
-  background-color: #0e417c;
+  background-color: #001936;
   color: #ffffff;
   line-height: 1.6;
 }
@@ -34,7 +34,7 @@ main {
 /* Record button styles */
 #record-btn {
   position: relative;
-  background-color: #38a9fd;
+  background-color: #004478;
   width: 3.6rem;
   height: 3.6rem;
   border-radius: 50%;
